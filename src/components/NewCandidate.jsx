@@ -18,19 +18,6 @@ const NewCandidate = () => {
           <Input type='text' title='Designation' id='designation' />
           <Input type='Number' title='Number' id='number' />
           <Input type='email' title='Email Address' id='email' />
-          <div className=' flex flex-col gap-1.5'>
-            <label
-              htmlFor='address'
-              className=' text-xs text-MediumGrey font-normal'
-            >
-              Address
-            </label>
-            <textarea
-              className='bg-LightGrey rounded-md p-1 h-[98px]  focus:outline-Purple p-2 resize-none font-Poppins text-sm text-DarkGrey'
-              id='address'
-              type='text'
-            />
-          </div>
         </div>
         <div className=' flex justify-between p-3 gap-4'>
           <Button className=' text-White bg-green-500 '>

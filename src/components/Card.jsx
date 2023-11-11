@@ -7,13 +7,16 @@ const Card = ({
   department,
   emailAddress,
   joiningDate,
+  phoneNumber,
+  designation,
   selectedEmployee,
+  image,
 }) => {
   let selected;
   selectedEmployee !== null
     ? (selected = selectedEmployee.employeeCode === employeeCode)
     : null;
-
+  console.log(image);
   return (
     <div
       onClick={() =>
@@ -24,14 +27,17 @@ const Card = ({
           department,
           emailAddress,
           joiningDate,
+          phoneNumber,
+          designation,
+          image,
         })
       }
       key={employeeCode}
       className={` ${
         selected
-          ? ' bg-Purple transition-colors duration-200 ease-out'
+          ? ' bg-Purple outline outline-1 outline-transparent transition-colors duration-200 ease-out'
           : ' bg-White outline outline-1 outline-LightGrey transition-colors duration-200 ease-in'
-      } flex items-center p-6 drop-shadow-lg  gap-6  rounded-lg select-none  `}
+      } flex items-center p-6 drop-shadow-lg rounded-lg select-none gap-6  `}
     >
       <span
         className={`${
@@ -41,11 +47,7 @@ const Card = ({
         {index}
       </span>
       <div className=' w-[50px] rounded-full overflow-hidden'>
-        <img
-          className='w-full h-auto object-cover'
-          src={`https://i.pravatar.cc/48?${employeeCode}`}
-          alt='cus'
-        />
+        <img className='w-full h-auto object-cover' src={image} alt='cus' />
       </div>
       <div
         className={`${

@@ -10,7 +10,7 @@ const employees = [
     designation: 'Software Engineer',
     department: 'Engineering',
     emailAddress: 'john.doe@example.com',
-    image: 'https://i.pravatar.cc/48?u=499476',
+    image: 'https://i.pravatar.cc/48?u=EMP011',
   },
   {
     name: 'Jane Smith',
@@ -20,7 +20,7 @@ const employees = [
     designation: 'Product Manager',
     department: 'Management',
     emailAddress: 'jane.smith@example.com',
-    image: 'https://i.pravatar.cc/48?u=499476',
+    image: 'https://i.pravatar.cc/48?u=EMP502',
   },
   {
     name: 'Bob Johnson',
@@ -30,7 +30,7 @@ const employees = [
     designation: 'Graphic Designer',
     department: 'Design',
     emailAddress: 'bob.johnson@example.com',
-    image: 'https://i.pravatar.cc/48?u=499476',
+    image: 'https://i.pravatar.cc/48?u=EMP703',
   },
   {
     name: 'Emily Davis',
@@ -40,7 +40,7 @@ const employees = [
     designation: 'HR Manager',
     department: 'HR Department',
     emailAddress: 'emily.davis@example.com',
-    image: 'https://i.pravatar.cc/48?u=499476',
+    image: 'https://i.pravatar.cc/48?u=EMP503',
   },
   {
     name: 'Alex Turner',
@@ -50,7 +50,7 @@ const employees = [
     designation: 'Marketing Specialist',
     department: 'Marketing',
     emailAddress: 'alex.turner@example.com',
-    image: 'https://i.pravatar.cc/48?u=499476',
+    image: 'https://i.pravatar.cc/48?u=EMP305',
   },
   {
     name: 'Sara Miller',
@@ -60,7 +60,7 @@ const employees = [
     designation: 'Financial Analyst',
     department: 'Finance',
     emailAddress: 'sara.miller@example.com',
-    image: 'https://i.pravatar.cc/48?u=499476',
+    image: 'https://i.pravatar.cc/48?u=EMP406',
   },
   {
     name: 'Chris White',
@@ -70,7 +70,7 @@ const employees = [
     designation: 'Operations Manager',
     department: 'Operations',
     emailAddress: 'chris.white@example.com',
-    image: 'https://i.pravatar.cc/48?u=499476',
+    image: 'https://i.pravatar.cc/48?u=EM107',
   },
 ];
 
@@ -79,7 +79,6 @@ const EmployeeLists = ({ onSelect, selectedEmployee }) => {
     <div className=' bg-White p-6 flex flex-col w-full gap-3 rounded-xl drop-shadow-xl '>
       {employees.map((e, index) => (
         <Card
-          className={` `}
           selectedEmployee={selectedEmployee}
           onClick={onSelect}
           key={e.employeeCode}

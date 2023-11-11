@@ -19,8 +19,9 @@ const Main = () => {
         onSelect={handleSelectEmployee}
         selectedEmployee={selectedEmployee}
       />
-      <Preview />
-      {/* <NewCandidate /> */}
+      {selectedEmployee !== null && (
+        <Preview selectedEmployee={selectedEmployee} />
+      )}
     </main>
   );
 };
