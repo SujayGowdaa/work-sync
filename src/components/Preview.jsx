@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Button from './Button';
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
 
@@ -5,7 +6,7 @@ const Preview = ({ selectedEmployee, onDelete }) => {
   function deleteEmployee() {
     onDelete(selectedEmployee);
   }
-  console.log(selectedEmployee);
+
   return (
     <aside className=' bg-White drop-shadow-xl rounded-xl'>
       <div className=' p-6 py-8 flex flex-col gap-6 '>

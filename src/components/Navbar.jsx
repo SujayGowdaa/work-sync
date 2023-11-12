@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import logo from '../assets/sync.png';
 import { AiFillPlusCircle } from 'react-icons/ai';
 
-const Navbar = () => {
+const Navbar = ({ setAddEmployee, onSelectEmployee }) => {
   return (
     <header className=' flex items-center justify-between px-6 py-3 bg-White rounded-xl drop-shadow-xl'>
       <div className=' flex items-center gap-2 '>
@@ -14,7 +15,13 @@ const Navbar = () => {
         placeholder='Search Employee'
       />
 
-      <button className=' flex text-[14px] items-center gap-2 px-6 py-4 bg-Purple text-White rounded-lg font-Poppins drop-shadow-md'>
+      <button
+        onClick={() => {
+          onSelectEmployee(null);
+          setAddEmployee(true);
+        }}
+        className=' flex text-[14px] items-center gap-2 px-6 py-4 bg-Purple text-White rounded-lg font-Poppins drop-shadow-md'
+      >
         <AiFillPlusCircle className=' text-[16px]' />
         Add Employee
       </button>

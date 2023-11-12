@@ -1,10 +1,36 @@
+/* eslint-disable react/prop-types */
 import Button from './Button';
 import { AiFillSave, AiFillCloseSquare } from 'react-icons/ai';
 import Input from './Input';
+import { useState } from 'react';
 
-const NewCandidate = () => {
+const NewCandidate = ({ setAddEmployee, setEmployeeList }) => {
+  const [newInput, setNewInput] = useState({
+    name: '',
+    joiningDate: '',
+    employeeCode: '',
+    phoneNumber: '',
+    designation: '',
+    department: '',
+    emailAddress: '',
+    image: 'https://i.pravatar.cc/48?u=',
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setEmployeeList((ps) => [...ps, newInput]);
+  }
+
+  function handleInputChange(identifier, value) {
+    setNewInput((ps) => ({
+      ...ps,
+      [identifier]: value,
+      image: 'https://i.pravatar.cc/48?u=' + ps.employeeCode,
+    }));
+  }
+
   return (
-    <aside className=' bg-White drop-shadow-xl rounded-xl'>
+    <aside className=' bg-White drop-shadow-xl rounded-xl h-[100%]'>
       <form className=' p-6 flex flex-col gap-6 max-w-[330px]'>
         <div className=' w-[146px] h-[146px] mx-auto rounded-full overflow-hidden'>
           <img
@@ -14,17 +40,63 @@ const NewCandidate = () => {
           />
         </div>
         <div className=' flex flex-col gap-6 p-3'>
-          <Input type='text' title='Name' id='name' />
-          <Input type='text' title='Designation' id='designation' />
-          <Input type='Number' title='Number' id='number' />
-          <Input type='email' title='Email Address' id='email' />
+          <Input
+            onChange={handleInputChange}
+            type='text'
+            title='Name'
+            id='name'
+          />
+          <Input
+            onChange={handleInputChange}
+            type='text'
+            title='Department'
+            id='department'
+          />
+          <Input
+            onChange={handleInputChange}
+            type='text'
+            title='Designation'
+            id='designation'
+          />
+          <Input
+            onChange={handleInputChange}
+            type='Number'
+            title='Number'
+            id='phoneNumber'
+          />
+          <Input
+            onChange={handleInputChange}
+            type='text'
+            title='Employee Code'
+            id='employeeCode'
+          />
+          <Input
+            onChange={handleInputChange}
+            type='email'
+            title='Email Address'
+            id='emailAddress'
+          />
+          <Input
+            onChange={handleInputChange}
+            type='date'
+            title='Date'
+            id='joiningDate'
+          />
         </div>
         <div className=' flex justify-between p-3 gap-4'>
-          <Button className=' text-White bg-green-500 '>
+          <Button
+            onClick={handleSubmit}
+            type='submit'
+            className=' text-White bg-green-500 '
+          >
             <AiFillSave className=' text-lg' />
             Save
           </Button>
-          <Button className=' bg-transparent outline outline-1 outline-MediumGrey text-MediumGrey'>
+          <Button
+            onClick={() => setAddEmployee(false)}
+            type='button'
+            className=' bg-transparent outline outline-1 outline-MediumGrey text-MediumGrey'
+          >
             <AiFillCloseSquare className=' text-lg' />
             Cancle
           </Button>

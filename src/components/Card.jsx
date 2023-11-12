@@ -56,14 +56,14 @@ const Card = ({
         <span
           className={` ${
             selected ? ' text-White' : ' text-Purple'
-          } basis-[120px] text-[16px]  font-bold uppercase`}
+          } basis-[120px] text-[16px] font-bold uppercase`}
         >
           {name}
         </span>
-        <span className=' basis-[130px]'>{department}</span>
-        <span className=' basis-2'>{employeeCode}</span>
-        <span className='  basis-[230px]'>{emailAddress}</span>
-        <span className=' basis-[100px]'>{joiningDate}</span>
+        <span className=' basis-[130px] capitalize'>{department}</span>
+        <span className=' basis-2 uppercase'>{employeeCode}</span>
+        <span className='  basis-[230px] lowercase'>{emailAddress}</span>
+        <span className=' basis-[100px] '>{joiningDate}</span>
       </div>
     </div>
   );

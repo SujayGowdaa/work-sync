@@ -1,14 +1,18 @@
 /* eslint-disable react/prop-types */
 import Card from './Card';
 
-const EmployeeLists = ({ onSelect, selectedEmployee, employeeList }) => {
+const EmployeeLists = ({
+  onSelectEmployee,
+  selectedEmployee,
+  employeeList,
+}) => {
   return (
-    <div className=' bg-White p-6 flex flex-col w-full gap-3 rounded-xl drop-shadow-xl '>
+    <div className=' bg-White p-6 flex flex-col w-full gap-3 rounded-xl drop-shadow-xl overflow-y-scroll'>
       {employeeList.map((e, index) => {
         return (
           <Card
             selectedEmployee={selectedEmployee}
-            onClick={onSelect}
+            onClick={onSelectEmployee}
             key={e.employeeCode}
             employeeCode={e.employeeCode}
             name={e.name}
