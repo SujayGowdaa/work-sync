@@ -16,7 +16,6 @@ const Card = ({
   selectedEmployee !== null
     ? (selected = selectedEmployee.employeeCode === employeeCode)
     : null;
-  console.log(image);
   return (
     <div
       onClick={() =>

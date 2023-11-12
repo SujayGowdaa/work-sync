@@ -1,7 +1,11 @@
 import Button from './Button';
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
 
-const Preview = ({ selectedEmployee }) => {
+const Preview = ({ selectedEmployee, onDelete }) => {
+  function deleteEmployee() {
+    onDelete(selectedEmployee);
+  }
+  console.log(selectedEmployee);
   return (
     <aside className=' bg-White drop-shadow-xl rounded-xl'>
       <div className=' p-6 py-8 flex flex-col gap-6 '>
@@ -67,7 +71,10 @@ const Preview = ({ selectedEmployee }) => {
             <AiFillEdit className=' text-lg' />
             Edit
           </Button>
-          <Button className=' text-White bg-red-500'>
+          <Button
+            onClick={() => deleteEmployee()}
+            className=' text-White bg-red-500'
+          >
             <AiFillDelete className=' text-lg' />
             Delete
           </Button>
