@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        Purple: '#671EDE',
+        Purple: '#6D16C5',
         White: '#FFFFFF',
         LightGrey: '#EDEEF0',
         MediumGrey: '#8C8FA6',
         DarkGrey: '#2B2A2D',
-        Cream: '#FFF6F3',
+        Cream: '#FFE8E5',
       },
       fontFamily: {
         Poppins: ['Poppins', 'sans-serif'],

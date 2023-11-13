@@ -1,9 +1,30 @@
 import { useState } from 'react';
 import Main from './components/Main';
 import Navbar from './components/Navbar';
+import user from '../src/assets/user.jpg';
 
 export default function App() {
   const [employeeList, setEmployeeList] = useState([
+    {
+      name: 'Sujay Gowda',
+      joiningDate: '2023-11-13',
+      employeeCode: 'EMP100',
+      phoneNumber: '123-456-7890',
+      designation: 'Web Developer',
+      department: 'Software Developement',
+      emailAddress: 'sujay.gowda@example.com',
+      image: user,
+    },
+    {
+      name: 'Chin Gowda',
+      joiningDate: '2023-11-13',
+      employeeCode: 'EMP000',
+      phoneNumber: '123-456-7890',
+      designation: 'Cardiac Surgeon',
+      department: 'Cardiology',
+      emailAddress: 'chin.gowda@example.com',
+      image: 'https://i.pravatar.cc/48?u=EMP190',
+    },
     {
       name: 'John Doe',
       joiningDate: '2023-01-01',
