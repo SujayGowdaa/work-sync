@@ -23,7 +23,7 @@ const Main = ({
   }
 
   return (
-    <main className=' flex gap-6 h-[100%] overflow-y-hidden'>
+    <main className=' flex gap-6 h-[100%] overflow-y-auto p-[24px] m-[-24px]'>
       <EmployeeLists
         employeeList={employeeList}
         onSelectEmployee={onSelectEmployee}

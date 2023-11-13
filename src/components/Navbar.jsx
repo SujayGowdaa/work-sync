@@ -4,6 +4,7 @@ import { AiFillPlusCircle } from 'react-icons/ai';
 const Navbar = ({ setAddEmployee, onSelectEmployee, setSearchTerm }) => {
   function handleSearch(e) {
     setSearchTerm(e.target.value);
+    onSelectEmployee(null);
   }
 
   return (

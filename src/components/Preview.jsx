@@ -8,7 +8,7 @@ const Preview = ({ selectedEmployee, onDelete }) => {
   }
 
   return (
-    <aside className=' bg-White drop-shadow-xl rounded-xl'>
+    <aside className=' card w-[400px] bg-White drop-shadow-xl rounded-xl overflow-y-scroll'>
       <div className=' p-6 py-8 flex flex-col gap-6 '>
         <div className=' w-[146px] h-[146px] mx-auto rounded-full overflow-hidden'>
           <img

@@ -8,3 +8,19 @@
     margin: 0;
   }
 }
+
+.container {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.card {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.card::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}

@@ -24,12 +24,9 @@ const EmployeeLists = ({
       return;
     }
   });
-  let name = 'Sanay gowda';
-  console.log(name);
-  console.log(name.trim());
 
   return (
-    <div className=' bg-White p-6 flex flex-col w-full gap-3 rounded-xl drop-shadow-xl overflow-y-scroll'>
+    <div className=' container bg-White p-6 flex flex-col max-w-full gap-3 rounded-xl drop-shadow-xl overflow-y-scroll '>
       {filteredList.map((e, index) => {
         return (
           <Card

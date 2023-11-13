@@ -34,9 +34,9 @@ const Card = ({
       key={employeeCode}
       className={` ${
         selected
-          ? ' bg-Purple outline outline-1 outline-transparent transition-colors duration-200 ease-out'
-          : ' bg-White outline outline-1 outline-LightGrey transition-colors duration-200 ease-in'
-      } flex items-center p-6 drop-shadow-lg rounded-lg select-none gap-6  `}
+          ? ' bg-Purple  outline-none transition-colors duration-200 ease-out'
+          : ' bg-White  outline-LightGrey transition-colors duration-200 ease-in'
+      } flex items-center outline outline-1 p-6 drop-shadow-lg rounded-lg select-none gap-6  `}
     >
       <span
         className={`${
@@ -60,7 +60,9 @@ const Card = ({
         >
           {name}
         </span>
-        <span className=' basis-[130px] capitalize'>{department}</span>
+        <span className=' basis-[130px] capitalize'>
+          {department.toLowerCase()}
+        </span>
         <span className=' basis-2 uppercase'>{employeeCode}</span>
         <span className='  basis-[230px] lowercase'>{emailAddress}</span>
         <span className=' basis-[100px] '>{joiningDate}</span>
