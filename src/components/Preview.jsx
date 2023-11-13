@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import Button from './Button';
-import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
+import { AiFillDelete } from 'react-icons/ai';
 
 const Preview = ({ selectedEmployee, onDelete }) => {
   function deleteEmployee() {
@@ -68,10 +68,10 @@ const Preview = ({ selectedEmployee, onDelete }) => {
           </div>
         </div>
         <div className=' flex justify-between p-3 gap-4'>
-          <Button className=' text-White bg-amber-500 '>
+          {/* <Button className=' text-White bg-amber-500 '>
             <AiFillEdit className=' text-lg' />
             Edit
-          </Button>
+          </Button> */}
           <Button
             onClick={() => deleteEmployee()}
             className=' text-White bg-red-500'

@@ -128,6 +128,21 @@ export default function App() {
         setEmployeeList={setEmployeeList}
         searchTerm={searchTerm}
       />
+      <footer className=' mx-auto font-Poppins text-gray-400 '>
+        <div className=' text-[10px] flex flex-col items-center gap-1'>
+          <span className=' block'>Designed and Developed by</span>
+          <span className=' block text-[12px] font-semibold text-gray-500'>
+            <a
+              className=' hover:text-Purple transition-all duration-300 active:text-white'
+              href='https://www.linkedin.com/in/sujaygowda/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              SUJAY GOWDA
+            </a>
+          </span>
+        </div>
+      </footer>
     </div>
   );
 }
