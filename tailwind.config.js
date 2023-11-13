@@ -9,6 +9,7 @@ export default {
         LightGrey: '#EDEEF0',
         MediumGrey: '#8C8FA6',
         DarkGrey: '#2B2A2D',
+        Cream: '#FFF6F3',
       },
       fontFamily: {
         Poppins: ['Poppins', 'sans-serif'],
