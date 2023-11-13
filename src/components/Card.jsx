@@ -56,7 +56,7 @@ const Card = ({
         <span
           className={` ${
             selected ? ' text-White' : ' text-Purple'
-          } basis-[120px] text-[16px] font-bold uppercase`}
+          } basis-[130px] text-[16px] font-bold uppercase`}
         >
           {name}
         </span>

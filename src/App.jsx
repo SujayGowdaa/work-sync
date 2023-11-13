@@ -89,7 +89,7 @@ export default function App() {
   }
 
   return (
-    <div className=' flex flex-col min-w-[1440px] h-screen rounded-xl bg-LightGrey p-12 gap-6 mx-auto'>
+    <div className=' flex flex-col min-w-[1440px] h-screen rounded-xl bg-Purple p-12 gap-6 mx-auto'>
       <Navbar
         setAddEmployee={setAddEmployee}
         onSelectEmployee={setselectedEmployee}
