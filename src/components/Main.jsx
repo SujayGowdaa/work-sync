@@ -12,6 +12,7 @@ const Main = ({
   selectedEmployee,
   setselectedEmployee,
   setNewEmployee,
+  searchTerm,
 }) => {
   function handleDeleteEmployee({ employeeCode }) {
     let updatedList = employeeList.filter(
@@ -22,11 +23,12 @@ const Main = ({
   }
 
   return (
-    <main className=' flex gap-6 max-h-[100vh] overflow-y-hidden'>
+    <main className=' flex gap-6 h-[100%] overflow-y-hidden'>
       <EmployeeLists
         employeeList={employeeList}
         onSelectEmployee={onSelectEmployee}
         selectedEmployee={selectedEmployee}
+        searchTerm={searchTerm}
       />
       {selectedEmployee !== null && (
         <Preview

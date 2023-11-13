@@ -78,6 +78,7 @@ export default function App() {
 
   const [selectedEmployee, setselectedEmployee] = useState(null);
   const [isAddEmployee, setAddEmployee] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   function handleSelectEmployee(employee) {
     selectedEmployee !== null &&
@@ -92,6 +93,9 @@ export default function App() {
       <Navbar
         setAddEmployee={setAddEmployee}
         onSelectEmployee={setselectedEmployee}
+        setEmployeeList={setEmployeeList}
+        employeeList={employeeList}
+        setSearchTerm={setSearchTerm}
       />
       <Main
         selectedEmployee={selectedEmployee}
@@ -101,6 +105,7 @@ export default function App() {
         setAddEmployee={setAddEmployee}
         employeeList={employeeList}
         setEmployeeList={setEmployeeList}
+        searchTerm={searchTerm}
       />
     </div>
   );

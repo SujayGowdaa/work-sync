@@ -5,10 +5,32 @@ const EmployeeLists = ({
   onSelectEmployee,
   selectedEmployee,
   employeeList,
+  searchTerm,
 }) => {
+  let filteredList = [];
+
+  employeeList.filter((employee) => {
+    if (searchTerm === '') {
+      filteredList.push(employee);
+      return;
+    } else if (
+      employee.name
+        .trim()
+        .replaceAll(' ', '')
+        .toLowerCase()
+        .includes(searchTerm.trim().replaceAll(' ', '').toLowerCase())
+    ) {
+      filteredList.push(employee);
+      return;
+    }
+  });
+  let name = 'Sanay gowda';
+  console.log(name);
+  console.log(name.trim());
+
   return (
     <div className=' bg-White p-6 flex flex-col w-full gap-3 rounded-xl drop-shadow-xl overflow-y-scroll'>
-      {employeeList.map((e, index) => {
+      {filteredList.map((e, index) => {
         return (
           <Card
             selectedEmployee={selectedEmployee}

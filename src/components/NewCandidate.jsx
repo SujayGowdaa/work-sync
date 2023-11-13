@@ -31,7 +31,7 @@ const NewCandidate = ({ setAddEmployee, setEmployeeList }) => {
 
   return (
     <aside className=' bg-White drop-shadow-xl rounded-xl h-[100%]'>
-      <form className=' p-6 flex flex-col gap-6 max-w-[330px]'>
+      <form className=' p-6 py-8 flex flex-col gap-6 '>
         <div className=' w-[146px] h-[146px] mx-auto rounded-full overflow-hidden'>
           <img
             className=' w-full h-auto'

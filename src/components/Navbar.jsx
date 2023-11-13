@@ -1,8 +1,11 @@
-/* eslint-disable react/prop-types */
-import logo from '../assets/sync.png';
+/* eslint-disable react/prop-types */ import logo from '../assets/sync.png';
 import { AiFillPlusCircle } from 'react-icons/ai';
 
-const Navbar = ({ setAddEmployee, onSelectEmployee }) => {
+const Navbar = ({ setAddEmployee, onSelectEmployee, setSearchTerm }) => {
+  function handleSearch(e) {
+    setSearchTerm(e.target.value);
+  }
+
   return (
     <header className=' flex items-center justify-between px-6 py-3 bg-White rounded-xl drop-shadow-xl'>
       <div className=' flex items-center gap-2 '>
@@ -10,6 +13,7 @@ const Navbar = ({ setAddEmployee, onSelectEmployee }) => {
         <img className=' w-auto h-[50px] ' src={logo} alt='Sync Logo' />
       </div>
       <input
+        onChange={handleSearch}
         className=' text-[16px] font-Poppins bg-LightGrey rounded-lg px-4 py-2 text-DarkGrey font-medium focus:outline-MediumGrey w-[400px] placeholder:text-sm'
         type='text'
         placeholder='Search Employee'
